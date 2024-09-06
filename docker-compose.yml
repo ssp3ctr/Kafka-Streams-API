@@ -1,0 +1,10 @@
+version: '3'
+services:
+  kafka-stream-app:
+    build: .
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=10.251.0.52:9092
+      - APPLICATION_ID=orders-update-app
+      - INPUT_TOPIC=OrdersUpdate
+    ports:
+      - "8080:8080"
